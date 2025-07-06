@@ -71,8 +71,6 @@ Mentora, farklı yaş ve öğrenme seviyelerindeki bireylerin ihtiyaçlarına hi
 - **Takip Paneli:** Çocuklarının ya da öğrencilerinin ilerlemesini kolayca görebilirler.  
 - **Önerilen İçerikler:** Hedefe yönelik yönlendirmeler ile öğrenme süreçlerine destek.
 
-- 
-
 ### Teknoloji Meraklıları
 - **AI Destekli Özellikler:** Kişiselleştirilmiş öneriler ve akıllı içerik üretimi ile interaktif bir öğrenme deneyimi.  
 - **Veri Odaklı Gelişim:** Gelişim analitiği ile kendi performanslarını ölçebilirler.
@@ -194,8 +192,6 @@ Sprint 1 sonunda projenin temel taşları başarıyla atılmıştır. Tasarım, 
 - React tabanlı proje yapısı kurulmuş ve ilk sayfalar geliştirilmiştir.
 - Notion ve GitHub entegrasyonu sağlanarak görev takibi ve sürüm kontrolü organize edilmiştir.
 
-
-**Katılımcılar**: Yüksel Feyza Keçilioğlu, Berk Akgül
 ---
 
 ## Sprint Retrospective
