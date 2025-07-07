@@ -148,6 +148,7 @@ Bu yapı sayesinde:
 Aşağıda Sprint 1 sürecinde tamamlanan Figma tasarım ekran görüntüsünü görebilirsiniz:
 
 ## ![mentorai](https://github.com/user-attachments/assets/a0661f04-3d3a-4181-ac44-8b50cebb33ca)
+## ![Mentorai2](https://github.com/user-attachments/assets/016781d9-d948-4063-ac8a-462148c7ef3e)
 
 ## 🗓️ Daily Scrum (Günlük Scrum Toplantıları)
 
@@ -175,13 +176,16 @@ Mentora projesi kapsamında, ekip içi iletişim ve senkronizasyonu sağlamak am
 
 ## 📌 Daily Scrum
 
-Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden gerçekleştirilmiş, gerektiğinde **Google Meet** üzerinden yapılan çevrim içi toplantılarla desteklenmiştir. Günlük görev takibi, tasarım güncellemeleri ve anlık sorunların çözümü Scrum Master yönlendirilmesi ile etkin bir şekilde yürütülmüştür.
+Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden gerçekleştirilmiş ve yapılan çevrim içi toplantılarla desteklenmiştir. Günlük görev takibi, tasarım güncellemeleri ve anlık sorunların çözümü Scrum Master yönlendirilmesi ile etkin bir şekilde yürütülmüştür.
 
 - Figma üzerinden Scrum Master tarafından geliştirilen tasarımlar paylaşılmış, yapılacaklar listesine göre değerlendirmeler yapılmıştır.
 - Görev atamaları yapılmış, özellikle ön yüz geliştirme ve arayüz tasarımı üzerine odaklanılmıştır.
 - Teknik kurulumlar, versiyon kontrol entegrasyonları ve React yapılandırması Scrum Master tarafından bu aşamada tamamlanmıştır.
 
  ##  ![sprint1mvp](https://github.com/user-attachments/assets/2b0ceeb5-fdda-4366-bd57-e7b51f39d3bf)
+ ##  ![Toplantı ss1](https://github.com/user-attachments/assets/0da10c30-8872-480c-b9c9-a48142078011)
+ ##  ![toplantı ss2](https://github.com/user-attachments/assets/393859d7-8318-4e52-ae64-ff9f0394e557)
+ 
 
 ## ✅ Sprint 1 Review
 
