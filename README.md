@@ -105,7 +105,7 @@ Mentora projesinde ürün geliştirme süreci, ihtiyaç duyulan tüm görevlerin
 
 - Her görev, **etki alanına** ve **tamamlanma süresine göre** önceliklendirilmiştir.
 - Görevler üç kategoriye ayrılmıştır:
- ## 🗂️ Product Backlog & Sprint Takibi
+ ## Product Backlog & Sprint Takibi
 
 Mentora projesinde klasik anlamda yapılandırılmış bir backlog yerine, çevik (agile) metodolojilere daha uygun, dinamik ve pratik bir görev yönetimi yaklaşımı benimsenmiştir. Bu sistem sayesinde ekip, değişen ihtiyaçlara anında adapte olmuş ve gereksiz bürokrasiye takılmadan ilerlemiştir.
 
@@ -120,7 +120,7 @@ Bu yapı sayesinde:
 - Takım içi sorumluluklar şeffaf bir biçimde dağılmış,
 - Her ekip üyesi, güncel durumu anlık olarak takip edebilmiştir.
 
-### 👥 Takım İçi İşleyiş
+### Takım İçi İşleyiş
 
 - Görev dağılımı, ekip üyelerinin uzmanlık alanlarına ve sprint önceliklerine göre yapılmıştır.
 - UI/UX tasarım, frontend geliştirme, içerik planlama ve teknik kararlar tek bir pano üzerinde yönetilmiştir.
@@ -154,7 +154,7 @@ Aşağıda Sprint 1 sürecinde tamamlanan Figma tasarım ekran görüntüsünü 
 ## ![mentorai](https://github.com/user-attachments/assets/a0661f04-3d3a-4181-ac44-8b50cebb33ca)
 ## ![Mentorai2](https://github.com/user-attachments/assets/016781d9-d948-4063-ac8a-462148c7ef3e)
 
-## 🗓️ Daily Scrum (Günlük Scrum Toplantıları)
+## Daily Scrum (Günlük Scrum Toplantıları)
 
 Mentora projesi kapsamında, ekip içi iletişim ve senkronizasyonu sağlamak amacıyla Daily Scrum toplantıları yapılmıştır.
 
@@ -178,8 +178,6 @@ Mentora projesi kapsamında, ekip içi iletişim ve senkronizasyonu sağlamak am
 
  ## ![temmuz 3 toplantı](https://github.com/user-attachments/assets/7561283e-838c-41d0-8116-db2e95271ac6)
 
-## 📌 Daily Scrum
-
 Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden gerçekleştirilmiş ve yapılan çevrim içi toplantılarla desteklenmiştir. Günlük görev takibi, tasarım güncellemeleri ve anlık sorunların çözümü Scrum Master yönlendirilmesi ile etkin bir şekilde yürütülmüştür.
 
 - Figma üzerinden Scrum Master tarafından geliştirilen tasarımlar paylaşılmış, yapılacaklar listesine göre değerlendirmeler yapılmıştır.
@@ -191,7 +189,7 @@ Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden ge
  ##  ![toplantı ss2](https://github.com/user-attachments/assets/393859d7-8318-4e52-ae64-ff9f0394e557)
  
 
-## ✅ Sprint 1 Review
+## Sprint 1 Review
 
 Sprint 1 sonunda projenin temel taşları başarıyla atılmıştır. Tasarım, ön yüz kurulumu ve proje yapısının ilk temelleri tamamlanmış; ekip üyeleri katkılarını aktarmıştır.
 
