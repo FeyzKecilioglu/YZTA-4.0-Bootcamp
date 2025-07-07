@@ -14,6 +14,10 @@
 
 Kullanıcı, sisteme yalnızca bir soru yazar ve ardından seçtiği karakterin (örneğin **Albert Einstein**, **Marie Curie**, **Fatih Sultan Mehmet**) bu soruya cevap verdiğini görür. Cevaplar, seçilen karakterin tarihi bağlamı ve kişisel üslubuyla zenginleştirilmiş şekilde sunulur.
 
+“Sorunuz: Evrim nedir?”
+Fatih Sultan Mehmet yanıtlıyor:
+“Her varlık, yaradılış kudretiyle şekillenir. Ancak zamanla, tabiat ona farklı roller biçebilir.”
+
 ### Bu sayede kullanıcı:
 - Karmaşık kavramları dönemin zihniyetiyle öğrenir.
 - Karakterin üslubunu taşıyan yaratıcı ve özgün cevaplar alır. 
