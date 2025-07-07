@@ -177,6 +177,8 @@ Mentora projesi kapsamında, ekip içi iletişim ve senkronizasyonu sağlamak am
   - Notion Sprint panosu üzerinden durum güncellemeleri
 
  ## ![temmuz 3 toplantı](https://github.com/user-attachments/assets/7561283e-838c-41d0-8116-db2e95271ac6)
+ ##  ![Toplantı ss1](https://github.com/user-attachments/assets/0da10c30-8872-480c-b9c9-a48142078011)
+ ##  ![toplantı ss2](https://github.com/user-attachments/assets/393859d7-8318-4e52-ae64-ff9f0394e557)
 
 Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden gerçekleştirilmiş ve yapılan çevrim içi toplantılarla desteklenmiştir. Günlük görev takibi, tasarım güncellemeleri ve anlık sorunların çözümü Scrum Master yönlendirilmesi ile etkin bir şekilde yürütülmüştür.
 
@@ -184,10 +186,7 @@ Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden ge
 - Görev atamaları yapılmış, özellikle ön yüz geliştirme ve arayüz tasarımı üzerine odaklanılmıştır.
 - Teknik kurulumlar, versiyon kontrol entegrasyonları ve React yapılandırması Scrum Master tarafından bu aşamada tamamlanmıştır.
 
- ##  ![sprint1mvp](https://github.com/user-attachments/assets/2b0ceeb5-fdda-4366-bd57-e7b51f39d3bf)
- ##  ![Toplantı ss1](https://github.com/user-attachments/assets/0da10c30-8872-480c-b9c9-a48142078011)
- ##  ![toplantı ss2](https://github.com/user-attachments/assets/393859d7-8318-4e52-ae64-ff9f0394e557)
- 
+ ##  ![sprint1mvp](https://github.com/user-attachments/assets/2b0ceeb5-fdda-4366-bd57-e7b51f39d3bf) 
 
 ## Sprint 1 Review
 
