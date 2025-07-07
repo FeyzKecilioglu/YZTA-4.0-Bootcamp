@@ -98,8 +98,27 @@ Bu sprintte Mentora projesinin temel yapı taşları atıldı. UI/UX tasarımı 
 
 ### Sprint Notları
 
-**Tahmin Edilen Tamamlanacak Puan:** 100 puan  
-**Tahmin Mantığı:** Sprint 1'de başlangıç hedefi 100 puan olarak belirlendi.  
+**Tahmin Edilen Tamamlanacak Puan:** 100 puan    
+
+Sprint 1 için toplam hedef puan **100 puan** olarak belirlenmiştir. Bu değer, sprint başlangıcında takımın kapasitesi ve haftalık çalışma temposuna göre sabitlenmiş ve görevler bu puan üzerinden orantılı olarak puanlandırılmıştır.
+Görevler, zorluk derecesi, kapsamı ve tamamlanma süresine göre 5 ile 15 puan arasında değerlendirilmiştir. Aşağıda, Sprint 1 kapsamında planlanan görevlerin yaklaşık puan dağılımları yer almaktadır:
+
+| Görev Adı                                         | Puan |
+|--------------------------------------------------|------|
+| Figma ile UI/UX tasarımının yapılması            | 13   |
+| React projesinin kurulması (`npx create-react-app`) | 5    |
+| Ana sayfa tasarımı ve kodlaması (Home.jsx)       | 13   |
+| Karakter kartı bileşeninin geliştirilmesi        | 13   |
+| Renk paleti ve logo entegrasyonu                 | 8    |
+| React dosya yapısının modülerleştirilmesi        | 13   |
+| Notion Kanban panosunun oluşturulması            | 5    |
+| Görev dağılımının yapılması                      | 5    |
+| README.md yazımı ve dokümantasyon                | 10   |
+| Toplantı organizasyonu ve iletişim yönetimi      | 15   |
+| **Toplam**                                       | **100** |
+
+> Görev puanları, klasik story point sistemine benzer şekilde tahmini efor ve karmaşıklık baz alınarak atanmıştır.
+> Bu sayede Sprint 1'in ilerleyişi ölçülebilir, gözlemlenebilir ve dengeli bir şekilde yönetilebilir olmuştur.
 
 Mentora projesinde ürün geliştirme süreci, ihtiyaç duyulan tüm görevlerin önceden sıralandığı ve zaman içinde detaylandırıldığı bir yapı üzerinden yürütülmektedir. Ancak klasik puanlama sistemleri yerine, takımımızın dinamiklerine uygun daha esnek ve gerçekçi bir yapı tercih edilmiştir:
 
