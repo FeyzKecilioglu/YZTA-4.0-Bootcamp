@@ -1,236 +1,135 @@
-## ![Blue Abstract Illustrative Human Artificial Intelligence Technology Logo (1)](https://github.com/user-attachments/assets/64d35e16-7ba4-4a3e-b083-286cd395ee67)
-## Takım Üyeleri
+# Sprint Notları (Sprint 1 - MVP)
 
-| İsim                 | Rol             |
-|----------------------|------------------|
-| Feyza Keçilioğlu     | Scrum Master     |
-| Salih Berke Ekenel   | Product Owner    |
-| Berk Akgül           | Developer        |
-| Hayrunnisa İnanç     | Developer        |
-
-## Proje Açıklaması 
-
-**Mentora**, yapay zekâ destekli, etkileşimli ve kişiselleştirilmiş bir öğrenme deneyimi sunan bir web uygulamasıdır. Uygulamanın temel amacı; öğrencilerin tarih, bilim gibi konuları daha ilgi çekici, kalıcı ve anlaşılır biçimde öğrenmesini sağlamaktır.
-
-Kullanıcı, sisteme yalnızca bir soru yazar ve ardından seçtiği karakterin (örneğin **Albert Einstein**, **Marie Curie**, **Fatih Sultan Mehmet**) bu soruya cevap verdiğini görür. Cevaplar, seçilen karakterin tarihi bağlamı ve kişisel üslubuyla zenginleştirilmiş şekilde sunulur.
-
-“Sorunuz: Evrim nedir?”
-Fatih Sultan Mehmet yanıtlıyor:
-“Her varlık, yaradılış kudretiyle şekillenir. Ancak zamanla, tabiat ona farklı roller biçebilir.”
-
-### Bu sayede kullanıcı:
-- Karmaşık kavramları dönemin zihniyetiyle öğrenir.
-- Karakterin üslubunu taşıyan yaratıcı ve özgün cevaplar alır. 
-- Cevabın doğruluğu ve açıklamasıyla geri bildirim alır.
-- Öğrenme sürecini oyunlaştırılmış bir etkileşimle pekiştirir.
-
-
-## Ürün Özellikleri (Product Features)
-
-### 1. Ana Sayfa (Home Page)
-- **Kullanıcı Seçimi:** Öğrenciler ilk girişte kendilerine uygun bir karakter/mentör seçer. Bu seçim, tüm öğrenme deneyimini kişiselleştirir.  
-- **Yapay Zekâ Tanıtımı:** Uygulamanın sunduğu AI destekli özellikler ana sayfada öne çıkar, kullanıcıya rehberlik eder.  
-- **Devam Et Butonu:** Kullanıcı, kaldığı yerden hızlıca devam edebilir.
-
-### 2. Öğrenme Alanı (Learning Area)
-- **Konuya Göre İçerik:** Öğrencinin seviyesine ve hedeflerine göre uygun içerikler listelenir.  
-- **Video, Metin ve Test İçeriği:** Öğrenci ister görsel, ister metinsel, ister quiz formatında içeriklere ulaşabilir.  
-- **İlerlemeni Takip Et:** Her dersin yanında yüzde bazında ilerleme gösterilir.
-
-### 3. Quiz Alanı (Quiz Area)
-- **Konu Bazlı Quizler:** Her konu sonunda seviyeye uygun mini testler yapılabilir.  
-- **Anında Geri Bildirim:** Doğru/yanlış cevaplara özel açıklamalar sunularak öğrenme pekiştirilir.  
-- **Puan Sistemi:** Quizlerden puan toplayan kullanıcıların seviyeleri yükselir, motivasyon artar.
-
-### 4. Gelişim Takibi (Progress Tracking)
-- **Grafiksel İlerleme:** Günlük, haftalık ve aylık gelişim istatistikleri grafiklerle sunulur.  
-- **Öğrenme Günlüğü:** Öğrenciler öğrendiklerini ya da deneyimlerini kısa notlarla kaydedebilir.  
-- **Hedef Belirleme:** Öğrenciler kendi öğrenme hedeflerini oluşturabilir, sistem bunları takip eder.
-
-### 5. AI Destekli Geri Bildirim (AI-Powered Insights)
-- **İçerik Önerileri:** Kullanıcının ilgi alanlarına ve eksik kaldığı konulara göre içerik önerileri yapılır.  
-- **Kişisel Gelişim Raporları:** Haftalık analizlerle kullanıcıya özel özet ve tavsiyeler sunulur.  
-- **Zorluk Seviyesi Uyarlama:** AI motoru, öğrencinin performansına göre içerik zorluk seviyesini otomatik ayarlar.
-
-### 6. Menü & Ayarlar (Menu & Settings)
-- **Tema Seçimi:** Karanlık ve aydınlık mod seçenekleriyle uygulama görünümü özelleştirilebilir.  
-- **Dil Seçimi:** Çoklu dil desteği sayesinde farklı kullanıcılar için erişilebilirlik artar.  
-- **Yardım & Destek:** Teknik destek, kullanıcı rehberi ve geri bildirim alanı içerir.
+Proje yönetimi için Notion kullanılmış ve sprint panosu Kanban yapısıyla oluşturulmuştur.  
+Uygulama arayüzü Streamlit kullanılarak oluşturulmuştur.  
+Projenin temel amacı olan veri yükleme, analiz etme ve ilk grafik oluşturma işlevleri Sprint 1 içerisinde tamamlanmıştır.  
+Kullanıcıdan veri alabilen, sütunları tanıyabilen ve zaman serisi grafiği çizebilen ilk prototip başarıyla geliştirilmiştir.  
+Klasör yapısı, gereksinim dosyaları ve ilk veri temizleme süreçleri bu sprintte tamamlanmıştır.
 
 ---
 
-## Hedef Kitle (Target Audience)
+## Sprint Amacı
 
-Mentora, farklı yaş ve öğrenme seviyelerindeki bireylerin ihtiyaçlarına hitap eden bir öğrenme asistanıdır. Aşağıdaki gruplara özel faydalar sunar:
+Bu sprintte EpiCast projesinin temel yapı taşları atıldı.  
+Uygulamanın klasör yapısı kuruldu, kullanıcıdan CSV dosyası alma ve önizleme işlevi geliştirildi.  
+Tarih ve vaka sütunlarının tanınması, zaman grafiği çizimi ve veri özetlerinin çıkarılması başarıyla gerçekleştirildi.  
+Ayrıca, temel hata yönetimi yapısı da ilk kez entegre edildi.
 
-### Öğrenciler
-- **Seviye Odaklı Öğrenme:** Ortaokuldan üniversiteye kadar her seviyeye uygun içerikler.  
-- **Quiz ve Hedef Takibi:** Sınavlara hazırlık, konu tekrarı ve hedef bazlı öğrenme.
+---
 
-### Profesyoneller
-- **Hızlı Öğrenme:** Yoğun tempoda çalışan bireyler için sadeleştirilmiş içerikler.  
-- **Kariyer Gelişimi:** Alan değişikliği yapan veya yeni beceriler öğrenmek isteyen profesyonellere yönelik kaynaklar.
+## Tahmin Edilen Tamamlanacak Puan: 100 puan
 
-### Veliler & Eğitmenler
-- **Takip Paneli:** Çocuklarının ya da öğrencilerinin ilerlemesini kolayca görebilirler.  
-- **Önerilen İçerikler:** Hedefe yönelik yönlendirmeler ile öğrenme süreçlerine destek.
+Sprint 1 için toplam hedef puan 100 puan olarak belirlenmiştir.  
+Bu değer, sprint başlangıcında takımın kapasitesi ve haftalık çalışma temposuna göre sabitlenmiş ve görevler bu puan üzerinden orantılı olarak puanlandırılmıştır.  
+Görevler, zorluk derecesi, kapsamı ve tamamlanma süresine göre 5 ile 15 puan arasında değerlendirilmiştir.
 
-### Teknoloji Meraklıları
-- **AI Destekli Özellikler:** Kişiselleştirilmiş öneriler ve akıllı içerik üretimi ile interaktif bir öğrenme deneyimi.  
-- **Veri Odaklı Gelişim:** Gelişim analitiği ile kendi performanslarını ölçebilirler.
+| Görev Adı                                          | Puan |
+|----------------------------------------------------|------|
+| Proje klasör yapısının oluşturulması               | 10   |
+| Streamlit kurulumu ve ilk test                     | 10   |
+| Dosya yükleme arayüzünün geliştirilmesi            | 15   |
+| Pandas ile veri okuma ve sütun adlarının temizlenmesi | 10 |
+| Tarih ve vaka sütununun otomatik tanımlanması      | 10   |
+| Zaman serisi grafiğinin çizilmesi (Plotly)         | 15   |
+| Temel veri özetlerinin hesaplanması ve yazılması   | 10   |
+| Hata yönetimi ve kullanıcı uyarı sistemlerinin eklenmesi | 10 |
+| Notion Kanban panosunun oluşturulması              | 5    |
+| README.md dosyasının başlatılması ve açıklama eklenmesi | 5 |
 
-## ![Blue Abstract Illustrative Human Artificial Intelligence Technology Logo (2)](https://github.com/user-attachments/assets/d2364725-8342-45f2-9569-36d816206038)
+**Toplam: 100 puan**
 
+---
 
-## Sprint Notları (Sprint 1 - MVP)
+## Product Backlog ve Sprint Takibi
 
-- Proje yönetimi için **Notion** kullanılmış ve sprint panosu Kanban yapısıyla oluşturulmuştur.
-- UI/UX tasarımı **Figma** ile gerçekleştirilmiş, temel arayüzler hazırlanmıştır.
--  **React.js** ile proje başlatılmış, temel bileşen yapısı oluşturulmuştur (`npx create-react-app` kullanılarak).
-- Ana sayfa (Home.jsx) tasarımı ve arka plan entegrasyonu yapılmıştır.
-- Karakter kartı bileşeni geliştirilmiş, yönlendirme mantığı kurulmuştur.
-- React dosya dizin yapısı düzenlenmiş ve modüler hale getirilmiştir.
-- Logo ve renk paleti tasarlanmıştır.
-- README.md dosyası oluşturulmuş ve proje hakkında temel bilgiler girilmiştir.
+EpiCast projesinde klasik anlamda yapılandırılmış bir backlog yerine, çevik (agile) metodolojilere daha uygun, dinamik ve pratik bir görev yönetimi yaklaşımı benimsenmiştir.  
+Bu sistem sayesinde ekip, değişen ihtiyaçlara anında adapte olmuş ve gereksiz bürokrasiye takılmadan ilerlemiştir.
 
-### Sprint Amacı
-Bu sprintte Mentora projesinin temel yapı taşları atıldı. UI/UX tasarımı yapıldı, teknolojik altyapı belirlendi, görev dağılımları netleştirildi ve temel kurulumlar tamamlandı.
+---
 
-### Sprint Notları
+## Görev Yönetimi Yapısı
 
-**Tahmin Edilen Tamamlanacak Puan:** 100 puan    
+Görevler, Notion tabanlı bir Kanban Panosu üzerinde üç ana sütun altında takip edilmiştir:
 
-Sprint 1 için toplam hedef puan **100 puan** olarak belirlenmiştir. Bu değer, sprint başlangıcında takımın kapasitesi ve haftalık çalışma temposuna göre sabitlenmiş ve görevler bu puan üzerinden orantılı olarak puanlandırılmıştır.
-Görevler, zorluk derecesi, kapsamı ve tamamlanma süresine göre 5 ile 15 puan arasında değerlendirilmiştir. Aşağıda, Sprint 1 kapsamında planlanan görevlerin yaklaşık puan dağılımları yer almaktadır:
-
-| Görev Adı                                         | Puan |
-|--------------------------------------------------|------|
-| Figma ile UI/UX tasarımının yapılması            | 13   |
-| React projesinin kurulması (`npx create-react-app`) | 5    |
-| Ana sayfa tasarımı ve kodlaması (Home.jsx)       | 13   |
-| Karakter kartı bileşeninin geliştirilmesi        | 13   |
-| Renk paleti ve logo entegrasyonu                 | 8    |
-| React dosya yapısının modülerleştirilmesi        | 13   |
-| Notion Kanban panosunun oluşturulması            | 5    |
-| Görev dağılımının yapılması                      | 5    |
-| README.md yazımı ve dokümantasyon                | 10   |
-| Toplantı organizasyonu ve iletişim yönetimi      | 15   |
-| **Toplam**                                       | **100** |
-
-> Görev puanları, klasik story point sistemine benzer şekilde tahmini efor ve karmaşıklık baz alınarak atanmıştır.
-> Bu sayede Sprint 1'in ilerleyişi ölçülebilir, gözlemlenebilir ve dengeli bir şekilde yönetilebilir olmuştur.
-
-Mentora projesinde ürün geliştirme süreci, ihtiyaç duyulan tüm görevlerin önceden sıralandığı ve zaman içinde detaylandırıldığı bir yapı üzerinden yürütülmektedir. Ancak klasik puanlama sistemleri yerine, takımımızın dinamiklerine uygun daha esnek ve gerçekçi bir yapı tercih edilmiştir:
-
-- Her görev, **etki alanına** ve **tamamlanma süresine göre** önceliklendirilmiştir.
-- Görevler üç kategoriye ayrılmıştır:
- ## Product Backlog & Sprint Takibi
-
-Mentora projesinde klasik anlamda yapılandırılmış bir backlog yerine, çevik (agile) metodolojilere daha uygun, dinamik ve pratik bir görev yönetimi yaklaşımı benimsenmiştir. Bu sistem sayesinde ekip, değişen ihtiyaçlara anında adapte olmuş ve gereksiz bürokrasiye takılmadan ilerlemiştir.
-
-### Görev Yönetimi Yapısı
-Görevler, Notion tabanlı bir **Kanban Panosu** üzerinde üç ana sütun altında takip edilmiştir:
-- **To Do** → Başlamaya hazır, tanımı netleştirilmiş görevler.
-- **In Progress** → Üzerinde aktif olarak çalışılan görevler.
-- **Done** → Tamamlanarak kapanan görevler.
+- **To Do** → Başlamaya hazır, tanımı netleştirilmiş görevler  
+- **In Progress** → Üzerinde aktif olarak çalışılan görevler  
+- **Done** → Tamamlanarak kapanan görevler  
 
 Bu yapı sayesinde:
-- Süreç her an gözlemlenebilir hale gelmiş,
-- Takım içi sorumluluklar şeffaf bir biçimde dağılmış,
-- Her ekip üyesi, güncel durumu anlık olarak takip edebilmiştir.
 
-### Takım İçi İşleyiş
+- Süreç her an gözlemlenebilir hale gelmiş,  
+- Takım içi sorumluluklar şeffaf bir biçimde dağılmış,  
+- Her ekip üyesi, güncel durumu anlık olarak takip edebilmiştir.  
 
-- Görev dağılımı, ekip üyelerinin uzmanlık alanlarına ve sprint önceliklerine göre yapılmıştır.
-- UI/UX tasarım, frontend geliştirme, içerik planlama ve teknik kararlar tek bir pano üzerinde yönetilmiştir.
-- Görevler günlük olarak gözden geçirilmiş, *“In Progress”* sütununda  yığılmaların önüne geçilmiştir.
+---
 
-### Sprint Bazlı Yol Haritası
+## Takım İçi İşleyiş
 
-#### Sprint 1 – Temel Altyapı & İlk Arayüzler
+Görev dağılımı, ekip üyelerinin uzmanlık alanlarına ve sprint önceliklerine göre yapılmıştır.  
+Veri işleme, arayüz tasarımı, hata yönetimi ve dosya yapısı tek pano üzerinde takip edilmiştir.  
+Görevler günlük olarak gözden geçirilmiş, “In Progress” sütununda yığılmaların önüne geçilmiştir.
 
-- Projenin teknik ve tasarımsal altyapısı oluşturuldu.
-- Sayfa bileşenleri (Home, Karakterler vb.) hazırlandı.
-- Logo, renk paleti ve Figma tasarımları tüm ekrana entegre edildi.
-- Görevler Notion Kanban panosunda `To Do`, `In Progress`, `Done` şeklinde takip edildi.
+---
 
-#### Sprint 2 – Kişiselleştirme & AI Mantığı
+## Sprint Bazlı Yol Haritası
 
-- Öğrenme alanı, kullanıcı profilleri ve içerik üretim modülü geliştirilecek.
-- Karakter kartları detaylandırılacak.
-- Backend sistem ve veri akışı tasarlanacak.
+- **Sprint 1** – Temel Altyapı & İlk Arayüzler  
+  Projenin teknik ve yapısal altyapısı oluşturuldu.  
+  CSV yükleme, veri önizleme, tarih/vaka sütunu tanıma ve zaman grafiği çizimi başarıyla entegre edildi.
 
-#### Sprint 3 – Test & Sunum Hazırlığı
+- **Sprint 2** – Tahmin Motoru & Harita & Otomatik Yorum  
+  Kullanıcının yüklediği verilere göre 7 günlük vaka tahmini yapıldı.  
+  Choropleth harita, AI yorumlama sistemi ve hastalık bazlı açıklamalar eklendi.
 
-- Tüm modüller entegre edilecek.
-- Hata ayıklama, kullanıcı testleri ve son UI/UX düzenlemeleri yapılacak.
-- Proje demosu ve sunum materyalleri hazırlanacak.
+- **Sprint 3** – Gelişmiş Tahmin ve Özelleştirme  
+  Tahmin süresi kullanıcının belirleyeceği şekilde esnetilecek.  
+  UI/UX sadeleştirilecek, yeni kullanıcı testleri yapılacak ve ileri seviye modeller (Prophet vb.) için hazırlık yapılacak.
 
-#### Figma Arayüz Tasarımı
-
-Aşağıda Sprint 1 sürecinde tamamlanan Figma tasarım ekran görüntüsünü görebilirsiniz:
-
-## ![mentorai](https://github.com/user-attachments/assets/a0661f04-3d3a-4181-ac44-8b50cebb33ca)
-## ![Mentorai2](https://github.com/user-attachments/assets/016781d9-d948-4063-ac8a-462148c7ef3e)
+---
 
 ## Daily Scrum (Günlük Scrum Toplantıları)
 
-Mentora projesi kapsamında, ekip içi iletişim ve senkronizasyonu sağlamak amacıyla Daily Scrum toplantıları yapılmıştır.
+EpiCast projesi kapsamında ekip içi iletişim ve senkronizasyonu sağlamak amacıyla günlük kısa toplantılar gerçekleştirilmiştir.
 
-- **Toplantı Yöntemi:**  
-  - WhatsApp grup konuşmaları  
-  - Google Meet
+### Toplantı Yöntemi:
 
-- **Toplantı Günleri:**  
-  - 29 Haziran 2025 — Takım tanışması, proje fikirlerinin tartışılması  
-  - 2 Temmuz 2025 — Proje ismi ve teknolojilerin belirlenmesi
-  - 3 Temmuz 2025 — Görev planlanması
+- WhatsApp grup konuşmaları  
+- Google Meet üzerinden teknik görüşmeler
 
-- **Toplantı Süresi:**  
-  - Ortalama 15-20 dakika
+### Toplantı Günleri:
 
-- **Toplantı Konuları:**  
-  - Günlük görevlerin paylaşılması  
-  - Karşılaşılan teknik veya organizasyonel sorunların aktarılması  
-  - Bir sonraki adımda yapılacak işlerin netleştirilmesi  
-  - Notion Sprint panosu üzerinden durum güncellemeleri
+- 28 Haziran 2025 — Proje yapısı, temel arayüz  
+- 29 Haziran 2025 — Veri önizleme ve sütun tanıma  
+- 30 Haziran 2025 — Grafik çizimi ve hata yönetimi
 
- ## ![temmuz 3 toplantı](https://github.com/user-attachments/assets/7561283e-838c-41d0-8116-db2e95271ac6)
- ##  ![Toplantı ss1](https://github.com/user-attachments/assets/0da10c30-8872-480c-b9c9-a48142078011)
- ##  ![toplantı ss2](https://github.com/user-attachments/assets/393859d7-8318-4e52-ae64-ff9f0394e557)
+### Toplantı Süresi:
+- Ortalama 15-20 dakika
 
-Sprint 1 süresince iletişimler ağırlıklı olarak **WhatsApp** üzerinden gerçekleştirilmiş ve yapılan çevrim içi toplantılarla desteklenmiştir. Günlük görev takibi, tasarım güncellemeleri ve anlık sorunların çözümü Scrum Master yönlendirilmesi ile etkin bir şekilde yürütülmüştür.
+### Toplantı Konuları:
 
-- Figma üzerinden Scrum Master tarafından geliştirilen tasarımlar paylaşılmış, yapılacaklar listesine göre değerlendirmeler yapılmıştır.
-- Görev atamaları yapılmış, özellikle ön yüz geliştirme ve arayüz tasarımı üzerine odaklanılmıştır.
-- Teknik kurulumlar, versiyon kontrol entegrasyonları ve React yapılandırması Scrum Master tarafından bu aşamada tamamlanmıştır.
+- Günlük görevlerin paylaşılması  
+- Karşılaşılan teknik veya organizasyonel sorunların aktarılması  
+- Bir sonraki adımda yapılacak işlerin netleştirilmesi  
+- Notion Sprint panosu üzerinden durum güncellemeleri yapılması
 
- ##  ![sprint1mvp](https://github.com/user-attachments/assets/2b0ceeb5-fdda-4366-bd57-e7b51f39d3bf) 
+---
 
 ## Sprint 1 Review
 
-Sprint 1 sonunda projenin temel taşları başarıyla atılmıştır. Tasarım, ön yüz kurulumu ve proje yapısının ilk temelleri tamamlanmış; ekip üyeleri katkılarını aktarmıştır.
-
-- Proje logosu ve görsel kimlik çalışmaları tamamlanmıştır.
-- Figma üzerinde ana sayfa ve kullanıcı akışları tasarlanmış, uygulamanın ilk prototipi oluşturulmuştur.
-- React tabanlı proje yapısı kurulmuş ve ilk sayfalar geliştirilmiştir.
-- Notion ve GitHub entegrasyonu sağlanarak görev takibi ve sürüm kontrolü organize edilmiştir.
+Sprint 1 sonunda projenin temel taşları başarıyla atılmıştır.  
+Veri yükleme, arayüz oluşturma, sütun tanıma ve zaman grafiği işlevleri tamamlanmıştır.  
+Kod yapısı sade, okunabilir ve yeniden kullanılabilir şekilde organize edilmiştir.  
+Uygulamanın ilk versiyonu çalışır durumdadır ve MVP koşullarını karşılamaktadır.
 
 ---
 
 ## Sprint Retrospective
 
-- Görevler daha atomik (küçük ve yönetilebilir) parçalara bölünerek sprint planlamalarının daha çevik yapılması sağlanacak.
-- UI/UX tasarım sürecinde görev dağılımı ekip içinde daha dengeli şekilde dağıtılacak.
-- Backend geliştirme süreci için ayrı bir teknik görev listesi (endpoint planlaması, veri modeli, API entegrasyonu gibi) oluşturulacak.
-- İletişim kanalı olarak WhatsApp kullanılmaya devam edilecek; kod entegrasyonu ve ilerleme takibi için GitHub pull request’leri, task bazlı durum güncellemeleri için ise Notion üzerinden ilerlenilecek.
-- Google Meet toplantıları ile teknik ilerlemeler ve engeller detaylı biçimde değerlendirilecek.
+- Görevler daha küçük, yönetilebilir parçalara bölündü.  
+- Sütun adlarının farklı varyasyonlarını tanıyacak şekilde kod esnekleştirildi.  
+- Hata yönetimi ile kullanıcı deneyimi artırıldı.  
+- UI şimdilik temel tutuldu, ilerleyen sprintlerde sadeleştirilecek.  
+- Takım içi iletişim verimli bulundu, Notion + WhatsApp + GitHub üçlüsü başarılı çalıştı.
 
-Sprint sonunda, ilk temel yapıların tamamlanmasıyla birlikte ürün geliştirme süreci daha kararlı ve organize bir zemine oturtulmuş oldu.
-
-
-
-
-
-
+---
 
