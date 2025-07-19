@@ -209,7 +209,96 @@ Uygulamanın ilk versiyonu çalışır durumdadır ve MVP koşullarını karşı
 - Sütun adlarının farklı varyasyonlarını tanıyacak şekilde kod esnekleştirildi.  
 - Hata yönetimi ile kullanıcı deneyimi artırıldı.  
 - UI şimdilik temel tutuldu, ilerleyen sprintlerde sadeleştirilecek.  
-- Takım içi iletişim verimli bulundu, Notion + WhatsApp + GitHub üçlüsü başarılı çalıştı.
+---
+
+
+# Sprint Notları (Sprint 2)
+
+Sprint 2, EpiCast projesinde fonksiyonel derinliğin arttığı ve uygulamanın gerçek değer önerisini kullanıcıya sunmaya başladığı sprint olmuştur.  
+Bu aşamada sadece veri görüntüleme değil, veriye dayalı içgörü üretme ve öngörü sağlama odaklı modüller geliştirilmiştir.
+
+## Sprint Amacı
+
+Bu sprintte temel işlevlerin ötesine geçilerek:
+
+- 7 günlük tahmin motorunun entegre edilmesi,  
+- Otomatik eğilim analizlerinin kullanıcıya sunulması,  
+- Seçilen hastalığa özel açıklamaların verilmesi,  
+- Dünya haritası üzerinden vaka yoğunluğunun görselleştirilmesi,  
+- Farklı formatlardan gelen verilerin uyarlanabilir hâle getirilmesi hedeflenmiştir.
+
+Uygulamanın artık sadece “gösteren” değil, aynı zamanda “yorumlayan” bir analitik araca dönüşmesi Sprint 2’nin odak noktası olmuştur.
 
 ---
+
+## Tahmin Edilen Tamamlanacak Puan: 120 puan
+
+| Görev Adı                                                       | Puan |
+|------------------------------------------------------------------|------|
+| Linear Regression ile tahmin fonksiyonunun yazılması             | 15   |
+| Tahmin sonuçlarının grafikle gösterilmesi                        | 15   |
+| Otomatik yorum çıkarım motorunun geliştirilmesi                  | 15   |
+| Hastalık seçimi için arayüz ve dinamik açıklama entegrasyonu     | 15   |
+| Plotly Choropleth ile harita modülünün geliştirilmesi            | 15   |
+| CSV veri uyumluluğunun artırılması (sütun adlarının normalize edilmesi) | 10   |
+| Hatalı veri yüklemeye karşı uyarı sisteminin detaylandırılması   | 10   |
+| Kod yapısının daha modüler hale getirilmesi                      | 10   |
+| README güncellemeleri ve örnek veri dokümantasyonu               | 10   |
+| Notion sprint tablosunun güncellenmesi ve günlük iş takibi       | 5    |
+
+**Toplam: 120 puan**
+
+---
+
+## Sprint Board Güncellemeleri
+
+Sprint 2 görevleri Notion panosunda 3 sütun altında takip edildi:
+
+- **To Do**  
+  Tahmin modülü tasarımı, ülke sütunu tanıma geliştirmesi, UI güncellemeleri
+
+- **In Progress**  
+  Plotly harita testleri, AI yorumlama sistemi, hata kontrolleri
+
+- **Done**  
+  Tahmin grafiği, veri sütun uyarlaması, hastalık açıklamaları, testler
+
+##  <img width="1197" height="802" alt="Sprint 2 Notion Kanban Tablosu" src="https://github.com/user-attachments/assets/66bccec6-4a09-404e-ad62-cace630bca6d" />
+
+## Daily Scrum
+
+Toplantılar günlük olarak WhatsApp üzerinden yazılı olarak yapıldı.
+
+## Screenshot
+
+- Tahminli vaka grafiği: Gerçek ve tahmini veriler aynı çizgide.
+## ![SS](https://github.com/user-attachments/assets/57e6b0fa-0634-4b3b-b1e6-f79cdfe6ef51)
+
+- Harita ekranı: Ülkelere göre yoğunluk renk skalası.
+## ![SS2](https://github.com/user-attachments/assets/b2534c88-34c0-4636-8f3b-f69515b122fc)
+
+- UI: Hastalık seçimi ve açıklama kutusu ekran görüntüsü.
+## ![SS3](https://github.com/user-attachments/assets/34c61942-28e2-49ea-8d09-50d6592248dd)
+
+
+## Sprint 2 Review
+
+Sprint 2 sonunda EpiCast uygulaması aşağıdaki kazanımlara ulaşmıştır:
+
+- Kullanıcı artık sadece geçmişi değil, geleceği de görebiliyor.
+- 7 günlük tahmin algoritması çalışır ve yorumlayabilir durumdadır.
+- Uygulama hastalığa özgü davranıyor: COVID-19 için varyant uyarısı, Zika için hamile birey uyarısı gibi açıklamalar dinamik olarak sunuluyor.
+- Veriye göre otomatik eğilim çıkarılıyor: artış, düşüş, sabitlik gibi özetler anında veriliyor.
+- Harita özelliğiyle vaka dağılımı coğrafi olarak incelenebilir hale geldi.
+- CSV’lerin farklı biçimlerde gelmesi sorun olmaktan çıktı, sistem adaptif hale getirildi.
+- Kullanıcıya hata vermeden, doğru bilgi sunan, sağlam bir temel oturtuldu.
+
+## Sprint Retrospective
+
+- Tahmin süreci ayrı fonksiyon olarak yazıldı, kod daha okunabilir hale getirildi.
+- Harita modülü sayesinde uygulamanın görsel gücü ciddi şekilde arttı.
+- Yorumlama dili sade ve anlaşılır hale getirildi (teknik terimlerden kaçınıldı).
+- Kod genel CSV formatları için esnekleştirildi, test dosyalarıyla uyumlu hale geldi.
+- Kullanıcı deneyimi açısından rehberli akış güçlendirildi.
+- UI sade tutuldu, ancak içeriksel olarak ciddi bir atılım yapıldı.
 
