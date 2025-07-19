@@ -1,5 +1,7 @@
-# Sprint Notları (Sprint 1 - MVP)
 
+## <img width="1024" height="1024" alt="EpiCast Logo" src="https://github.com/user-attachments/assets/d3ffbd1e-f529-443a-8b87-4b6931500095" />
+
+# Sprint Notları (Sprint 1 - MVP)
 Proje yönetimi için Notion kullanılmış ve sprint panosu Kanban yapısıyla oluşturulmuştur.  
 Uygulama arayüzü Streamlit kullanılarak oluşturulmuştur.  
 Projenin temel amacı olan veri yükleme, analiz etme ve ilk grafik oluşturma işlevleri Sprint 1 içerisinde tamamlanmıştır.  
