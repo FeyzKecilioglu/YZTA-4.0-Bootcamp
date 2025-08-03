@@ -360,12 +360,65 @@ Temel gündem başlıkları:
 - Kullanıcı dosyalarında tarih-sütun adı farklılıklarına karşı çözüm
 
 ---
+Veri Yükleme Arayüzü
+## <img width="1918" height="623" alt="Arayüz 1" src="https://github.com/user-attachments/assets/dec2a227-5aaa-4d44-9d9a-122b515f5847" />
 
-### 🖼️ Screenshot Açıklamaları  
+Bu ekran, kullanıcının analiz etmek istediği hastalığı seçtiği ve kendi verisini yüklediği ana giriş panelidir.
+Kullanıcı sol panelden hastalığı seçtikten sonra CSV dosyasını sisteme yükler. Uygulama, tarih ve vaka sütunlarını otomatik olarak algılar ve analizi başlatır.
 
-- **SS1:** 14 günlük tahmin grafiği – Gerçek ve öngörülen değerler  
-- **SS2:** Harita görselleştirmesi – Ülkelere göre yoğunluk ve açıklama  
-- **SS3:** Yayın öncesi boş ekran kontrolü ve yükleme sonrası grafik oluşumu
+- Kullanıcı dostu bir tasarıma sahiptir
+- Dosya boyutu limiti belirlenmiştir (200MB)
+- Hatalı veya eksik veri yüklendiğinde sistem uyarı verir. Bu yapı sayesinde uygulama, her tür kullanıcı için erişilebilir hale gelir.
+
+Ülke Seçimi ve Veri Filtreleme
+
+## <img width="1892" height="767" alt="arayüz2" src="https://github.com/user-attachments/assets/dbb49af7-02d5-4098-8879-f9cacd57f297" />
+
+Bu ekran, kullanıcıya yüklediği veriler içinden belirli bir ülkeyi seçerek analiz yapma imkânı sunar. Varsayılan olarak tüm ülkeleri kapsayan analiz yapılabilirken, kullanıcı isterse ülke filtresi uygulayarak sadece o ülkeye ait:
+
+- Grafikler
+- Tahmin sonuçları
+- Harita yoğunlukları
+- Açıklama kutuları özelleştirilmiş şekilde gösterilir.
+
+Bu yapı, özellikle büyük veri setlerinde belirli bir ülkeye odaklanmak isteyen kullanıcılar için işlevsellik sağlar.
+
+Tanınan Sütunlar ve Veri Önizlemesi
+## <img width="1430" height="558" alt="arayüz3" src="https://github.com/user-attachments/assets/161afb37-6f5b-4b67-821b-99e7642f179a" />
+
+Kullanıcının yüklediği CSV dosyasında:
+
+- Tarih sütunu
+- Vaka (Confirmed) sütunu
+- Ülke sütunu otomatik olarak algılanmakta ve sistem tarafından eşleştirilmektedir.
+
+Alt kısımda, ilk birkaç satırdan oluşan örnek bir veri tablosu gösterilerek kullanıcıya veri yapısının doğru okunup okunmadığı kontrol ettirilir. Bu özellik hem kullanıcı dostu bir deneyim sağlar hem de veri formatı hatalarını hızlıca fark ettirir.
+
+Vaka Yoğunluğu Haritası
+## <img width="1202" height="627" alt="arayüz4" src="https://github.com/user-attachments/assets/f1866b40-300f-436b-9364-40f50f11fe34" />
+
+Kullanıcının yüklediği verilerden ülke bazlı vaka sayıları alınarak, Plotly kullanılarak interaktif bir choropleth (yoğunluk) harita oluşturulmaktadır. Bu harita sayesinde kullanıcı:
+
+- Hangi ülkede kaç vaka olduğunu hızlıca görebilir,
+- Koyu renkli bölgeler üzerinden en çok etkilenen ülkeleri ayırt edebilir,
+- Küresel ölçekte pandeminin yayılımını sezgisel bir şekilde analiz edebilir. Bu özellik veri görselleştirmeyi sade ve etkili hale getirerek kullanıcı deneyimini güçlendirmektedir.
+
+Ülke Seçimine Göre Harita Özelliği (Geliştirilmiş)
+## <img width="1115" height="572" alt="Arayüz 5" src="https://github.com/user-attachments/assets/f413a309-c929-42ea-9ec1-e3dd2cbe715c" />
+
+Kullanıcı bir ülke seçtiğinde, vaka yoğunluğu haritası yalnızca o ülkeyi öne çıkaracak şekilde güncellenmektedir. Böylece daha fokuslanmış ve anlamlı bir görselleştirme sunulmaktadır. Yukarıda görüldüğü gibi, kullanıcı “Türkiye”yi seçtiğinde sadece Türkiye verisi görselleştirilmiştir:
+
+Bu özellik, harita bileşenini statik bir tablo olmaktan çıkarıp etkileşimli ve veri odaklı bir analiz aracı hâline getirir.
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -382,7 +435,7 @@ Sprint sonunda EpiCast uygulaması:
 
 ---
 
-### ♻️ Sprint Retrospective  
+### Sprint Retrospective  
 
 **İyi Gidenler:**
 - Yayın süreci ilk denemede sorunsuz tamamlandı  
