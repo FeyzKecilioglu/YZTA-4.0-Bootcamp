@@ -1,4 +1,4 @@
-# EpiCast - Bulaşcı Hastalık Analiz Aracı
+# 🧠 EpiCast - Bulaşcı Hastalık Analiz Aracı
 # Versiyon: Final (14 gün tahminli, isteğe bağlı ülke seçimi ile)
 
 import streamlit as st
@@ -10,15 +10,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-# Sayfa ayarları
-display_title = "\U0001F9A0 EpiCast - Bulaşcı Hastalık Analiz Aracı"
 st.set_page_config(page_title="EpiCast", layout="wide")
-st.title(display_title)
+st.title("🧠 EpiCast - Bulaşcı Hastalık Analiz Aracı")
 
-# ----------------------------
 # Kullanıcı Girişi ve Dosya Yükleme
-# ----------------------------
-
 st.sidebar.header("Hastalık Seçimi")
 st.sidebar.markdown("Analiz etmek istediğiniz hastalığı seçin. Bu seçim, yorumları ve grafik başlıklarını etkiler.")
 disease_type = st.sidebar.selectbox("Hastalık Seçimi", [
@@ -29,7 +24,6 @@ disease_type = st.sidebar.selectbox("Hastalık Seçimi", [
 uploaded_file = st.file_uploader("CSV veri dosyanızı yükleyin", type="csv")
 
 @st.cache_data
-# Veri yükleme ve eksikleri doldurma fonksiyonu
 def load_data(file):
     df = pd.read_csv(file)
     df.columns = df.columns.str.strip()
@@ -39,14 +33,9 @@ if not uploaded_file:
     st.warning("Lütfen bir CSV dosyası yükleyin.")
     st.stop()
 
-# ----------------------------
-# Veri Hazırlık ve Tanıma
-# ----------------------------
-
 with st.spinner("Veri işleniyor..."):
     df = load_data(uploaded_file)
 
-    # Tarih sütunu tanıma
     date_col = next((col for col in df.columns if "date" in col.lower()), None)
     if not date_col:
         st.error("Tarih sütunu bulunamadı.")
@@ -56,17 +45,14 @@ with st.spinner("Veri işleniyor..."):
         st.error("Tarih sütunu geçersiz. Lütfen tarih formatını kontrol edin.")
         st.stop()
 
-    # Vaka sütunu tanıma
     possible_case_cols = ["cases", "new_cases", "confirmed", "total_cases"]
     case_col = next((col for col in df.columns if col.lower() in possible_case_cols), None)
     if not case_col:
         st.error("Vaka sütunu bulunamadı. Lütfen 'cases' gibi yaygın isimlendirme kullanın.")
         st.stop()
 
-    # Ülke sütunu tanıma
     country_col = next((col for col in df.columns if "country" in col.lower() or "region" in col.lower()), None)
 
-    # Opsiyonel ülke seçimi
     if country_col:
         countries = sorted(df[country_col].dropna().unique().tolist())
         countries.insert(0, "Tümü")
@@ -74,23 +60,17 @@ with st.spinner("Veri işleniyor..."):
         if selected_country != "Tümü":
             df = df[df[country_col] == selected_country]
 
-    # Son 14 gün verisini filtrele
     df = df[df['date'] >= df['date'].max() - pd.Timedelta(days=14)]
 
-    # Sütun bilgisini göster
-    st.subheader("🔢 Tanınan Sütunlar")
+    st.subheader("Tanınan Sütunlar")
     st.markdown(f"""
     - Tarih sütunu: `{date_col}`  
     - Vaka sütunu: `{case_col}`  
     - Ülke sütunu: `{country_col if country_col else 'Yok'}`
     """)
 
-    st.subheader("📄 Veri Önizlemesi")
+    st.subheader("Veri Önizlemesi")
     st.write(df.head())
-
-# ----------------------------
-# Tahmin Fonksiyonu
-# ----------------------------
 
 def predict_future(df, case_col, days=14):
     df = df.copy().sort_values("date")
@@ -106,11 +86,7 @@ def predict_future(df, case_col, days=14):
     future_dates = [df['date'].max() + pd.Timedelta(days=i) for i in range(1, days + 1)]
     return pd.DataFrame({'date': future_dates, case_col: predictions})
 
-# ----------------------------
-# Görsel Sunumlar ve Yorumlar
-# ----------------------------
-
-st.subheader("🌍 Vaka Yoğunluğu Haritası")
+st.subheader("Vaka Yoğunluğu Haritası")
 if country_col:
     try:
         map_fig = px.choropleth(
@@ -127,22 +103,14 @@ if country_col:
 else:
     st.info("Ülke bilgisi bulunamadı, harita gösterilemiyor.")
 
-# Vaka grafiği
-st.subheader("📅 Günlük Vaka Grafiği")
+st.subheader("Günlük Vaka Grafiği")
 try:
-    if country_col and selected_country == "Tümü":
-        # Ülke bazında toplam al, daha doğru grafik
-        df_grouped = df.groupby("date")[case_col].sum().reset_index()
-        fig = px.line(df_grouped, x='date', y=case_col, title=f"{disease_type} - Günlük Toplam Vaka Sayısı (Tüm Ülkeler)")
-    else:
-        fig = px.line(df, x='date', y=case_col, title=f"{disease_type} - Günlük Vaka Sayısı")
+    fig = px.line(df, x='date', y=case_col, title=f"{disease_type} - Günlük Vaka Sayısı ({selected_country})")
     st.plotly_chart(fig)
 except Exception as e:
     st.error(f"Grafik çizilemedi: {e}")
 
-
-# Özet istatistik
-st.subheader("📊 Genel İstatistikler")
+st.subheader("Genel İstatistikler")
 try:
     total = df[case_col].sum()
     peak = df.loc[df[case_col].idxmax()]
@@ -157,17 +125,22 @@ try:
 except Exception as e:
     st.error(f"Özet hesaplanamadı: {e}")
 
-# Tahmin grafiği ve yorum
 try:
+    if df[case_col].is_monotonic_increasing:
+        df[case_col] = df[case_col].diff().fillna(0)
+
     pred_df = predict_future(df, case_col, days=14)
     combined = pd.concat([df[['date', case_col]], pred_df])
-    st.subheader("🕒 14 Günlük Tahmin")
+
+    st.subheader("14 Günlük Tahmin")
     fig2 = px.line(combined, x='date', y=case_col, title=f"{disease_type} - Gerçek ve Tahmini Vaka Grafiği")
     st.plotly_chart(fig2)
 
-    # Otomatik yorum
+    start_date = df['date'].max().date()
+    st.caption(f"Not: Bu grafik, son veri tarihi olan **{start_date}**'den itibaren 14 günlük tahmini içermektedir.")
+
     first, last = pred_df[case_col].iloc[0], pred_df[case_col].iloc[-1]
-    st.subheader("💬 Tahmin Yorumu")
+    st.subheader("Tahmin Yorumu")
     if last > first * 1.1:
         st.markdown("Artış eğilimi bekleniyor.")
     elif last < first * 0.9:
@@ -177,8 +150,7 @@ try:
 except Exception as e:
     st.error(f"Tahmin yapılamadı: {e}")
 
-# Hastalığa özgü yorum
-st.subheader("📈 Hastalığa Özgü Bilgi")
+st.subheader("Hastalığa Özgü Bilgi")
 comments = {
     "COVID-19": "Yeni varyantlar nedeniyle dalgalanmalar görülebilir.",
     "Influenza (Grip)": "Mevsimsel geçişlerde vaka artışı görülebilir.",
@@ -190,4 +162,3 @@ comments = {
     "RSV": "Bebekler ve yaşlılar için tehlikeli olabilir."
 }
 st.markdown(comments.get(disease_type, ""))
-
