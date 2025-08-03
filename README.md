@@ -492,4 +492,8 @@ Sprint sonunda EpiCast uygulaması:
 ### 🌍 Yayın Adresi
 🔗 [https://epicast.onrender.com](https://epicast.onrender.com)
 
+## 📽️ Demo Videosu
+
+👉 [EpiCast Tanıtım Videosunu Google Drive üzerinden izlemek için tıklayın](https://drive.google.com/file/d/1b6nXfUNbPVq0vjl_ePhr8SJulVfUbHVO/view?usp=sharing)
+
 
