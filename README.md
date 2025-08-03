@@ -1,4 +1,4 @@
-<img width="1278" height="657" alt="arayüz 6" src="https://github.com/user-attachments/assets/e2d36f52-7c08-4a9a-be44-a4fb1dd3b779" />
+
 ## <img width="500" height="500" alt="Logo" src="https://github.com/user-attachments/assets/291bf40a-c326-4cf9-bbf8-141cf08831c7" />
 ## Proje Açıklaması
 
