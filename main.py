@@ -130,10 +130,16 @@ else:
 # Vaka grafiği
 st.subheader("📅 Günlük Vaka Grafiği")
 try:
-    fig = px.line(df, x='date', y=case_col, title=f"{disease_type} - Günlük Vaka Sayısı")
+    if country_col and selected_country == "Tümü":
+        # Ülke bazında toplam al, daha doğru grafik
+        df_grouped = df.groupby("date")[case_col].sum().reset_index()
+        fig = px.line(df_grouped, x='date', y=case_col, title=f"{disease_type} - Günlük Toplam Vaka Sayısı (Tüm Ülkeler)")
+    else:
+        fig = px.line(df, x='date', y=case_col, title=f"{disease_type} - Günlük Vaka Sayısı")
     st.plotly_chart(fig)
 except Exception as e:
     st.error(f"Grafik çizilemedi: {e}")
+
 
 # Özet istatistik
 st.subheader("📊 Genel İstatistikler")
@@ -184,3 +190,4 @@ comments = {
     "RSV": "Bebekler ve yaşlılar için tehlikeli olabilir."
 }
 st.markdown(comments.get(disease_type, ""))
+
