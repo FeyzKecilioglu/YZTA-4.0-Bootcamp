@@ -347,9 +347,9 @@ Sprint 3 tüm görevler başarıyla tamamlanmıştır.
 |-----------|--------------------------------------------------------------------------|
 | Done   | 14 günlük tahmin, eksik veri desteği, otomatik sütun algılama, UI sadeleştirme, harita yorumları, Render yayını, deploy testi, README |
 
----
+## <img width="1231" height="908" alt="Kanban " src="https://github.com/user-attachments/assets/1e4477a0-28de-4974-b8c7-a3c96ae65145" />
 
-### 🗓Daily Scrum  
+### Daily Scrum  
 Toplantılar saat WhatsApp üzerinden gerçekleştirilmiştir.  
 Temel gündem başlıkları:
 
@@ -360,7 +360,7 @@ Temel gündem başlıkları:
 - Kullanıcı dosyalarında tarih-sütun adı farklılıklarına karşı çözüm
 
 ---
-Veri Yükleme Arayüzü
+#### Veri Yükleme Arayüzü
 ## <img width="1918" height="623" alt="Arayüz 1" src="https://github.com/user-attachments/assets/dec2a227-5aaa-4d44-9d9a-122b515f5847" />
 
 Bu ekran, kullanıcının analiz etmek istediği hastalığı seçtiği ve kendi verisini yüklediği ana giriş panelidir.
@@ -370,7 +370,7 @@ Kullanıcı sol panelden hastalığı seçtikten sonra CSV dosyasını sisteme y
 - Dosya boyutu limiti belirlenmiştir (200MB)
 - Hatalı veya eksik veri yüklendiğinde sistem uyarı verir. Bu yapı sayesinde uygulama, her tür kullanıcı için erişilebilir hale gelir.
 
-Ülke Seçimi ve Veri Filtreleme
+### Ülke Seçimi ve Veri Filtreleme
 
 ## <img width="1892" height="767" alt="arayüz2" src="https://github.com/user-attachments/assets/dbb49af7-02d5-4098-8879-f9cacd57f297" />
 
@@ -394,7 +394,7 @@ Kullanıcının yüklediği CSV dosyasında:
 
 Alt kısımda, ilk birkaç satırdan oluşan örnek bir veri tablosu gösterilerek kullanıcıya veri yapısının doğru okunup okunmadığı kontrol ettirilir. Bu özellik hem kullanıcı dostu bir deneyim sağlar hem de veri formatı hatalarını hızlıca fark ettirir.
 
-Vaka Yoğunluğu Haritası
+### Vaka Yoğunluğu Haritası
 ## <img width="1202" height="627" alt="arayüz4" src="https://github.com/user-attachments/assets/f1866b40-300f-436b-9364-40f50f11fe34" />
 
 Kullanıcının yüklediği verilerden ülke bazlı vaka sayıları alınarak, Plotly kullanılarak interaktif bir choropleth (yoğunluk) harita oluşturulmaktadır. Bu harita sayesinde kullanıcı:
@@ -403,7 +403,7 @@ Kullanıcının yüklediği verilerden ülke bazlı vaka sayıları alınarak, P
 - Koyu renkli bölgeler üzerinden en çok etkilenen ülkeleri ayırt edebilir,
 - Küresel ölçekte pandeminin yayılımını sezgisel bir şekilde analiz edebilir. Bu özellik veri görselleştirmeyi sade ve etkili hale getirerek kullanıcı deneyimini güçlendirmektedir.
 
-Ülke Seçimine Göre Harita Özelliği (Geliştirilmiş)
+### Ülke Seçimine Göre Harita Özelliği (Geliştirilmiş)
 ## <img width="1115" height="572" alt="Arayüz 5" src="https://github.com/user-attachments/assets/f413a309-c929-42ea-9ec1-e3dd2cbe715c" />
 
 Kullanıcı bir ülke seçtiğinde, vaka yoğunluğu haritası yalnızca o ülkeyi öne çıkaracak şekilde güncellenmektedir. Böylece daha fokuslanmış ve anlamlı bir görselleştirme sunulmaktadır. Yukarıda görüldüğü gibi, kullanıcı “Türkiye”yi seçtiğinde sadece Türkiye verisi görselleştirilmiştir:
@@ -411,12 +411,12 @@ Kullanıcı bir ülke seçtiğinde, vaka yoğunluğu haritası yalnızca o ülke
 Bu özellik, harita bileşenini statik bir tablo olmaktan çıkarıp etkileşimli ve veri odaklı bir analiz aracı hâline getirir.
 
 
-Günlük Vaka Grafiği 
+### Günlük Vaka Grafiği 
 ## <img width="1278" height="657" alt="arayüz 6" src="https://github.com/user-attachments/assets/6a10a009-acc0-44a3-943f-f4b2918f8f59" />
 Bu grafik, seçilen hastalık için veri setinde yer alan tüm tarih aralığında kaydedilen toplam vaka sayılarını günlük olarak göstermektedir. Şu anda “Tüm Ülkeler” seçili olduğu için, farklı ülkelerden gelen veriler birleştirilerek her güne ait toplam vaka sayısı hesaplanmıştır. Grafikte vaka sayılarının istikrarlı bir şekilde arttığı görülüyor. Bu durum, pandeminin yayılım sürecinin veri setine nasıl yansıdığını gözler önüne seriyor. Eğer bir ülke seçilirse, bu grafik yalnızca o ülkeye ait verilerle yeniden oluşturulur ve ülke bazlı analiz yapılabilir.
 
 
-Genel İstatistikler
+### Genel İstatistikler
 ## <img width="976" height="276" alt="arayüz 7" src="https://github.com/user-attachments/assets/33cb1f79-c073-4344-b3ad-8995bab6f5d6" />
 
 Uygulama, seçilen hastalığa ve isteğe bağlı olarak ülkeye göre genel istatistikleri hesaplar. Bu sayede kullanıcılar veriye dair hızlı ve özet bir bakış elde edebilir:
@@ -428,11 +428,35 @@ Uygulama, seçilen hastalığa ve isteğe bağlı olarak ülkeye göre genel ist
 
 Bu istatistikler, genel eğilimleri anlamak ve sonraki tahminlere sağlam bir temel oluşturmak için sunulmaktadır.
 
- 
+### 14 Günlük Vaka Tahmini Yorumu
+## <img width="1317" height="708" alt="Arayüz 8" src="https://github.com/user-attachments/assets/ddf1efea-8e59-4449-b4ae-6e156b9deb94" />
 
+Model, Türkiye'nin son 14 günlük verileri kullanılarak lineer regresyon yöntemiyle eğitildi. Günlük vaka sayıları üzerinden yapılan bu tahmine göre:
 
+- **Tahmin başlangıç tarihi:** 2020-07-27  
+- **Gözlemlenen eğilim:** Sabit seviyelerde seyreden günlük vaka sayılarının ardından hafif bir artış eğilimi beklenmektedir.  
+- **Model yorumu:** Bu, önümüzdeki günlerde vaka sayılarının yavaş ancak düzenli bir şekilde artabileceğine işaret etmektedir.
 
+> Türkiye için oluşturulan 14 günlük tahmin grafiği, vaka artış hızında ılımlı bir yükseliş öngörmektedir.
 
+### **Genel 14 Günlük Tahmin Analizi**
+## <img width="1135" height="700" alt="Arayüz 9" src="https://github.com/user-attachments/assets/c46278c7-ca37-4090-84a2-3e4fba6c5982" />
+
+Tüm ülkelerin verilerinin toplamı baz alınarak yapılan bu tahmin grafiği, **27 Temmuz 2020** tarihinden itibaren 14 günlük bir öngörüyü kapsamaktadır. Grafik incelendiğinde:
+
+- Son günlerdeki dalgalı seyir dikkat çekicidir. Bu dalgalanma, farklı ülkelerdeki vaka artış ve azalışlarının toplam etkisini yansıtıyor olabilir.
+- Tahmin verilerine göre, genel bir artış eğilimi öngörülmektedir. Bu da kısa vadede küresel vaka sayılarının yükselme potansiyeline işaret etmektedir.
+- Model, geçmiş 7 günlük veriler üzerinden oluşturulduğundan dolayı daha çok kısa vadeli analizlerde kullanılmaya uygundur.
+
+Bu analiz, karar vericilere ve sağlık otoritelerine genel seyir hakkında fikir vermesi açısından faydalıdır.
+
+### **Tahmin Yorumu**  
+Modelin çıktısına göre genel vaka sayılarında **artış eğilimi** öngörülmektedir. Bu eğilim, mevcut vaka verilerine dayalı olarak oluşturulan 14 günlük kısa vadeli projeksiyonu yansıtmaktadır.
+
+**Hastalığa Özgü Bilgi**  
+Özellikle **COVID-19** gibi hızlı mutasyona uğrayan hastalıklarda, **yeni varyantlar** nedeniyle kısa vadeli öngörülerde **dalgalanmalar** yaşanabilir. Bu nedenle modelin sonuçları yorumlanırken bu etki göz önünde bulundurulmalıdır.
+
+## <img width="875" height="270" alt="arayüz 10" src="https://github.com/user-attachments/assets/00b3934a-e943-4524-8c72-e818c190546d" />
 
 ---
 
