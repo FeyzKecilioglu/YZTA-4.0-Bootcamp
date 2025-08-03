@@ -1,4 +1,4 @@
-
+<img width="1278" height="657" alt="arayüz 6" src="https://github.com/user-attachments/assets/e2d36f52-7c08-4a9a-be44-a4fb1dd3b779" />
 ## <img width="500" height="500" alt="Logo" src="https://github.com/user-attachments/assets/291bf40a-c326-4cf9-bbf8-141cf08831c7" />
 ## Proje Açıklaması
 
@@ -411,10 +411,24 @@ Kullanıcı bir ülke seçtiğinde, vaka yoğunluğu haritası yalnızca o ülke
 Bu özellik, harita bileşenini statik bir tablo olmaktan çıkarıp etkileşimli ve veri odaklı bir analiz aracı hâline getirir.
 
 
+Günlük Vaka Grafiği 
+## <img width="1278" height="657" alt="arayüz 6" src="https://github.com/user-attachments/assets/6a10a009-acc0-44a3-943f-f4b2918f8f59" />
+Bu grafik, seçilen hastalık için veri setinde yer alan tüm tarih aralığında kaydedilen toplam vaka sayılarını günlük olarak göstermektedir. Şu anda “Tüm Ülkeler” seçili olduğu için, farklı ülkelerden gelen veriler birleştirilerek her güne ait toplam vaka sayısı hesaplanmıştır. Grafikte vaka sayılarının istikrarlı bir şekilde arttığı görülüyor. Bu durum, pandeminin yayılım sürecinin veri setine nasıl yansıdığını gözler önüne seriyor. Eğer bir ülke seçilirse, bu grafik yalnızca o ülkeye ait verilerle yeniden oluşturulur ve ülke bazlı analiz yapılabilir.
 
 
+Genel İstatistikler
+## <img width="976" height="276" alt="arayüz 7" src="https://github.com/user-attachments/assets/33cb1f79-c073-4344-b3ad-8995bab6f5d6" />
 
+Uygulama, seçilen hastalığa ve isteğe bağlı olarak ülkeye göre genel istatistikleri hesaplar. Bu sayede kullanıcılar veriye dair hızlı ve özet bir bakış elde edebilir:
 
+- **Toplam vaka**: Veri kümesindeki tüm satırlardaki vaka sayılarının toplamıdır.  
+- **En yüksek günlük vaka**: En çok vakanın görüldüğü gün ve sayısı.  
+- **Günlük ortalama**: Günlük vaka değerlerinin ortalaması alınarak hesaplanır.  
+- **Son veri tarihi**: Veri kümesinde yer alan en güncel tarih.
+
+Bu istatistikler, genel eğilimleri anlamak ve sonraki tahminlere sağlam bir temel oluşturmak için sunulmaktadır.
+
+ 
 
 
 
