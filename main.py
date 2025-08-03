@@ -1,4 +1,4 @@
-# 🧠 EpiCast - Bulaşcı Hastalık Analiz Aracı
+# EpiCast - Bulaşcı Hastalık Analiz Aracı
 # Versiyon: Final (14 gün tahminli, isteğe bağlı ülke seçimi ile)
 
 import streamlit as st
@@ -10,10 +10,15 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
+# Sayfa ayarları
+display_title = "\U0001F9A0 EpiCast - Bulaşcı Hastalık Analiz Aracı"
 st.set_page_config(page_title="EpiCast", layout="wide")
-st.title("🧠 EpiCast - Bulaşcı Hastalık Analiz Aracı")
+st.title(display_title)
 
+# ----------------------------
 # Kullanıcı Girişi ve Dosya Yükleme
+# ----------------------------
+
 st.sidebar.header("Hastalık Seçimi")
 st.sidebar.markdown("Analiz etmek istediğiniz hastalığı seçin. Bu seçim, yorumları ve grafik başlıklarını etkiler.")
 disease_type = st.sidebar.selectbox("Hastalık Seçimi", [
@@ -33,9 +38,14 @@ if not uploaded_file:
     st.warning("Lütfen bir CSV dosyası yükleyin.")
     st.stop()
 
+# ----------------------------
+# Veri Hazırlık ve Tanıma
+# ----------------------------
+
 with st.spinner("Veri işleniyor..."):
     df = load_data(uploaded_file)
 
+    # Tarih sütunu tanıma
     date_col = next((col for col in df.columns if "date" in col.lower()), None)
     if not date_col:
         st.error("Tarih sütunu bulunamadı.")
@@ -45,14 +55,17 @@ with st.spinner("Veri işleniyor..."):
         st.error("Tarih sütunu geçersiz. Lütfen tarih formatını kontrol edin.")
         st.stop()
 
+    # Vaka sütunu tanıma
     possible_case_cols = ["cases", "new_cases", "confirmed", "total_cases"]
     case_col = next((col for col in df.columns if col.lower() in possible_case_cols), None)
     if not case_col:
         st.error("Vaka sütunu bulunamadı. Lütfen 'cases' gibi yaygın isimlendirme kullanın.")
         st.stop()
 
+    # Ülke sütunu tanıma
     country_col = next((col for col in df.columns if "country" in col.lower() or "region" in col.lower()), None)
 
+    # Opsiyonel ülke seçimi
     if country_col:
         countries = sorted(df[country_col].dropna().unique().tolist())
         countries.insert(0, "Tümü")
@@ -60,17 +73,23 @@ with st.spinner("Veri işleniyor..."):
         if selected_country != "Tümü":
             df = df[df[country_col] == selected_country]
 
+    # Son 14 gün verisini filtrele
     df = df[df['date'] >= df['date'].max() - pd.Timedelta(days=14)]
 
-    st.subheader("Tanınan Sütunlar")
+    # Sütun bilgisini göster
+    st.subheader("🔢 Tanınan Sütunlar")
     st.markdown(f"""
     - Tarih sütunu: `{date_col}`  
     - Vaka sütunu: `{case_col}`  
     - Ülke sütunu: `{country_col if country_col else 'Yok'}`
     """)
 
-    st.subheader("Veri Önizlemesi")
+    st.subheader("📄 Veri Önizlemesi")
     st.write(df.head())
+
+# ----------------------------
+# Tahmin Fonksiyonu
+# ----------------------------
 
 def predict_future(df, case_col, days=14):
     df = df.copy().sort_values("date")
@@ -86,7 +105,11 @@ def predict_future(df, case_col, days=14):
     future_dates = [df['date'].max() + pd.Timedelta(days=i) for i in range(1, days + 1)]
     return pd.DataFrame({'date': future_dates, case_col: predictions})
 
-st.subheader("Vaka Yoğunluğu Haritası")
+# ----------------------------
+# Görsel Sunumlar ve Yorumlar
+# ----------------------------
+
+st.subheader("🌍 Vaka Yoğunluğu Haritası")
 if country_col:
     try:
         map_fig = px.choropleth(
@@ -103,14 +126,16 @@ if country_col:
 else:
     st.info("Ülke bilgisi bulunamadı, harita gösterilemiyor.")
 
-st.subheader("Günlük Vaka Grafiği")
+# Günlük vaka grafiği
+st.subheader("📅 Günlük Vaka Grafiği")
 try:
     fig = px.line(df, x='date', y=case_col, title=f"{disease_type} - Günlük Vaka Sayısı ({selected_country})")
     st.plotly_chart(fig)
 except Exception as e:
     st.error(f"Grafik çizilemedi: {e}")
 
-st.subheader("Genel İstatistikler")
+# Genel istatistik
+st.subheader("📊 Genel İstatistikler")
 try:
     total = df[case_col].sum()
     peak = df.loc[df[case_col].idxmax()]
@@ -125,22 +150,26 @@ try:
 except Exception as e:
     st.error(f"Özet hesaplanamadı: {e}")
 
+# 14 günlük tahmin
 try:
+    # Eğer veri kümülatifse, günlük artışa çevir
     if df[case_col].is_monotonic_increasing:
         df[case_col] = df[case_col].diff().fillna(0)
 
     pred_df = predict_future(df, case_col, days=14)
     combined = pd.concat([df[['date', case_col]], pred_df])
 
-    st.subheader("14 Günlük Tahmin")
+    st.subheader("🕒 14 Günlük Tahmin")
     fig2 = px.line(combined, x='date', y=case_col, title=f"{disease_type} - Gerçek ve Tahmini Vaka Grafiği")
     st.plotly_chart(fig2)
 
+    # Otomatik açıklama
     start_date = df['date'].max().date()
     st.caption(f"Not: Bu grafik, son veri tarihi olan **{start_date}**'den itibaren 14 günlük tahmini içermektedir.")
 
+    # Otomatik yorum
     first, last = pred_df[case_col].iloc[0], pred_df[case_col].iloc[-1]
-    st.subheader("Tahmin Yorumu")
+    st.subheader("💬 Tahmin Yorumu")
     if last > first * 1.1:
         st.markdown("Artış eğilimi bekleniyor.")
     elif last < first * 0.9:
@@ -150,7 +179,8 @@ try:
 except Exception as e:
     st.error(f"Tahmin yapılamadı: {e}")
 
-st.subheader("Hastalığa Özgü Bilgi")
+# Hastalığa özel açıklamalar
+st.subheader("📈 Hastalığa Özgü Bilgi")
 comments = {
     "COVID-19": "Yeni varyantlar nedeniyle dalgalanmalar görülebilir.",
     "Influenza (Grip)": "Mevsimsel geçişlerde vaka artışı görülebilir.",
