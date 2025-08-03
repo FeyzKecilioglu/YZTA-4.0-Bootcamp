@@ -1,4 +1,4 @@
-
+<img width="321" height="310" alt="image" src="https://github.com/user-attachments/assets/5b11937f-f54d-430f-b18b-c5a6764437fa" />
 ## <img width="500" height="500" alt="Logo" src="https://github.com/user-attachments/assets/291bf40a-c326-4cf9-bbf8-141cf08831c7" />
 ## Proje Açıklaması
 
@@ -347,10 +347,11 @@ Sprint 3 tüm görevler başarıyla tamamlanmıştır.
 |-----------|--------------------------------------------------------------------------|
 | Done   | 14 günlük tahmin, eksik veri desteği, otomatik sütun algılama, UI sadeleştirme, harita yorumları, Render yayını, deploy testi, README |
 
+
 ## <img width="1231" height="908" alt="Kanban " src="https://github.com/user-attachments/assets/1e4477a0-28de-4974-b8c7-a3c96ae65145" />
 
 ### Daily Scrum  
-Toplantılar saat WhatsApp üzerinden gerçekleştirilmiştir.  
+Görüşmeler WhatsApp üzerinden gerçekleştirilmiştir.  
 Temel gündem başlıkları:
 
 - 60 günlük tahminlerde ortaya çıkan hata eğilimlerinin analizi  
@@ -358,7 +359,7 @@ Temel gündem başlıkları:
 - Yayın öncesi test planı ve kontroller  
 - requirements.txt kurulabilirliği  
 - Kullanıcı dosyalarında tarih-sütun adı farklılıklarına karşı çözüm
-
+## ![Daily Scrum](https://github.com/user-attachments/assets/225164dc-87c9-4409-b285-3b331d8a3036)
 ---
 #### Veri Yükleme Arayüzü
 ## <img width="1918" height="623" alt="Arayüz 1" src="https://github.com/user-attachments/assets/dec2a227-5aaa-4d44-9d9a-122b515f5847" />
@@ -494,6 +495,6 @@ Sprint sonunda EpiCast uygulaması:
 
 ## 📽️ Demo Videosu
 
-👉 [EpiCast Tanıtım Videosunu Google Drive üzerinden izlemek için tıklayın](https://drive.google.com/file/d/1b6nXfUNbPVq0vjl_ePhr8SJulVfUbHVO/view?usp=sharing)
+👉 [EpiCast Tanıtım Videosunu Youtube üzerinden izlemek için tıklayın][(https://drive.google.com/file/d/1b6nXfUNbPVq0vjl_ePhr8SJulVfUbHVO/view?usp=sharing)](https://www.youtube.com/watch?v=Yn6tunCC5t8)
 
 
