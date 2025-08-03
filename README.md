@@ -302,3 +302,103 @@ Sprint 2 sonunda EpiCast uygulaması aşağıdaki kazanımlara ulaşmıştır:
 - Kullanıcı deneyimi açısından rehberli akış güçlendirildi.
 - UI sade tutuldu, ancak içeriksel olarak ciddi bir atılım yapıldı.
 
+##  Sprint Notları (Sprint 3)
+
+###  Sprint Tanımı  
+Sprint 3, EpiCast uygulamasının teknik açıdan kararlılığını artmıştır. Model doğruluğunu korumak amacıyla yeniden optimize edilen bir geliştirme süreci olmuştur. Ayrıca bu sprint, uygulamanın ilk kez yayınlandığı ve kullanıcıya sunulduğu sprinttir.
+---
+###  Sprint Amacı  
+Bu sprintte, uygulamanın üretime hazır hale getirilmesi hedeflenmiştir. Özellikle:
+
+- Mevcut 7 günlük tahmin sisteminin **14 güne çıkarılması**,  
+- Veri eksikliklerinden etkilenmeden çalışan **hata toleranslı bir tahmin akışı**,  
+- Otomatik sütun tanıma (tarih, vaka sayısı) yeteneği,  
+- Uygulamanın **Render** üzerinde yayınlanması ve test edilmesi,  
+- Harita yorumlarının sabitlenmesi ve UI düzenlemeleri,
+
+hedeflenmiştir.
+
+---
+
+### Tahmin Edilen Tamamlanacak Puan: 130 puan
+
+| Görev Adı                                                                 | Puan |
+|---------------------------------------------------------------------------|------|
+| 14 günlük tahmin modelinin geliştirilmesi (Linear Regression ile)        | 20   |
+| Eksik veri senaryoları için toleranslı giriş yapısının oluşturulması     | 15   |
+| Uygulamanın Render üzerinden yayına alınması                              | 20   |
+| requirements.txt dosyasının oluşturulması ve deploy testlerinin yapılması| 10   |
+| Sütun adlarının otomatik tespiti (datetime, vaka vs.)                     | 15   |
+| UI güncellemeleri: boş ekran yönetimi, sadeleştirme                       | 10   |
+| Harita modülünün yorumlarla sabitlenmesi                                  | 15   |
+| Proje dökümantasyonu, örnek veri ve README düzenlemeleri                  | 15   |
+| Sprint sürecinin Notion üzerinden günlük olarak takip edilmesi           | 10   |
+
+**Toplam Puan: 130**
+
+---
+
+### Sprint Board Güncellemeleri
+
+Sprint 3 tüm görevler başarıyla tamamlanmıştır.  
+“To Do” veya “In Progress” sütununda **hiçbir açık görev kalmamıştır.**
+
+| Durum     | Görevler                                                                 |
+|-----------|--------------------------------------------------------------------------|
+| Done   | 14 günlük tahmin, eksik veri desteği, otomatik sütun algılama, UI sadeleştirme, harita yorumları, Render yayını, deploy testi, README |
+
+---
+
+### 🗓Daily Scrum  
+Toplantılar saat WhatsApp üzerinden gerçekleştirilmiştir.  
+Temel gündem başlıkları:
+
+- 60 günlük tahminlerde ortaya çıkan hata eğilimlerinin analizi  
+- LinearRegression modeline veri hazırlık optimizasyonları  
+- Yayın öncesi test planı ve kontroller  
+- requirements.txt kurulabilirliği  
+- Kullanıcı dosyalarında tarih-sütun adı farklılıklarına karşı çözüm
+
+---
+
+### 🖼️ Screenshot Açıklamaları  
+
+- **SS1:** 14 günlük tahmin grafiği – Gerçek ve öngörülen değerler  
+- **SS2:** Harita görselleştirmesi – Ülkelere göre yoğunluk ve açıklama  
+- **SS3:** Yayın öncesi boş ekran kontrolü ve yükleme sonrası grafik oluşumu
+
+---
+
+### Sprint Review
+
+Sprint sonunda EpiCast uygulaması:
+
+- 14 günlük tahmin yapabilen kararlı bir modele sahip hale gelmiştir.  
+- Eksik veri içeren CSV dosyalarında çalışabilirlik kazanmıştır.  
+- Otomatik sütun tespitiyle kullanıcı etkileşimi kolaylaştırılmıştır.  
+- UI sadeleştirilmiş, hata mesajları daha kullanıcı dostu hale getirilmiştir.  
+- Uygulama Render.com üzerinden ilk kez yayına alınmış ve test edilmiştir.  
+- Belgeler, örnek veri ve görsellerle desteklenmiş bir sürüm teslim edilmiştir.
+
+---
+
+### ♻️ Sprint Retrospective  
+
+**İyi Gidenler:**
+- Yayın süreci ilk denemede sorunsuz tamamlandı  
+- Tahmin çıktısı düzgün ve anlaşılır grafiklerle sunuldu  
+- Kodlar okunabilir ve modüler yapıda geliştirildi  
+- Tüm görevler sprint sonunda eksiksiz tamamlandı
+
+**Geliştirilecekler:**
+- Gelecekte farklı modellerle (Prophet, ARIMA, LSTM) uzun vadeli tahmin doğruluğu artırılmalı  
+- Harita modülü etkileşimli hale getirilmeli (filtreleme, hover, zoom)  
+- Mobil kullanıcı deneyimi detaylı test edilmeli  
+- İleri seviyede kullanıcılar için veri export (CSV, JSON) gibi fonksiyonlar eklenmeli
+
+---
+
+### 🌍 Yayın Adresi
+🔗 [https://epicast.onrender.com](https://epicast.onrender.com)
+
+
